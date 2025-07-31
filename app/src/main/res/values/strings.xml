@@ -31,7 +31,8 @@
     <string name="email">Email</string>
     
     <!-- OTP Verification Screen -->
-    <string name="otp_sent_message">OTP code has been send to ab****1@gmail.com</string>
+    <string name="sample_email">ab****1@gmail.com</string>
+    <string name="otp_sent_message">OTP code has been send to %s</string>
     <string name="resend_timer">Resend code in 44s</string>
     <string name="verify">Verify</string>
     
