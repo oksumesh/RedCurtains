@@ -1,16 +1,1 @@
-Red Curtain Cinema App - Beta Release
-
-What's New:
-- Initial beta release of Red Curtain Cinema App
-- User authentication flow (Sign In, Sign Up, Forgot Password)
-- OTP verification system
-- Modern Material Design 3 UI
-- Full-screen immersive experience
-- Dark theme optimized for cinema aesthetics
-
-Known Issues:
-- Social login features (Google, Facebook, Apple) are placeholders
-- Main app content not yet implemented
-- Backend integration pending
-
-This is a beta version for testing purposes. 
+Logo Updated
