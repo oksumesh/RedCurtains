@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Red Curtain Cinema App</string>
+    
+    <!-- Login Screen -->
+    <string name="login_title">Login to Your Account</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password_link">Forgot password?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="red_curtain">RED CURTAIN</string>
+    <string name="cinema_app">CINEMA APP</string>
+    
+    <!-- Sign Up Screen -->
+    <string name="sign_up">Sign up</string>
+    <string name="back">Back</string>
+    <string name="phone">Phone</string>
+    <string name="continue_text">Continue</string>
+    <string name="google_sign_in">Google</string>
+    <string name="terms_of_service_agreement">By sign in or sign up, you agree to our Terms of Service</string>
+    <string name="privacy_policy">and Privacy Policy</string>
+    
+    <!-- Forgot Password Screen -->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password_instruction">Select which contact details should we use to reset your password.</string>
+    <string name="forgot_password_illustration">Password reset illustration</string>
+    <string name="via_email">Via Email</string>
+    <string name="email">Email</string>
+    
+    <!-- OTP Verification Screen -->
+    <string name="otp_sent_message">OTP code has been send to ab****1@gmail.com</string>
+    <string name="resend_timer">Resend code in 44s</string>
+    <string name="verify">Verify</string>
+    
+    <!-- Create Password Screen -->
+    <string name="create_new_password">Create New Password</string>
+    <string name="create_password_illustration">Password creation illustration</string>
+    <string name="validation_rule">Validation rule</string>
+    <string name="password_rule_1">Cannot contain your name or email address</string>
+    <string name="password_rule_2">At least 8 characters</string>
+    <string name="password_rule_3">This is a success tooltip</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+</resources>

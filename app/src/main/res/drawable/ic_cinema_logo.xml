@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    
+    <!-- Red Curtain Background -->
+    <path
+        android:fillColor="#CC0000"
+        android:pathData="M10,10 L70,10 L70,70 L10,70 Z"/>
+    
+    <!-- Curtain Folds -->
+    <path
+        android:fillColor="#AA0000"
+        android:pathData="M15,15 L25,15 L25,65 L15,65 Z"/>
+    <path
+        android:fillColor="#AA0000"
+        android:pathData="M35,15 L45,15 L45,65 L35,65 Z"/>
+    <path
+        android:fillColor="#AA0000"
+        android:pathData="M55,15 L65,15 L65,65 L55,65 Z"/>
+    
+    <!-- Clapperboard -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,25 L55,25 L55,55 L25,55 Z"/>
+    
+    <!-- Clapperboard Stripes -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M25,30 L55,30 L55,32 L25,32 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M25,35 L55,35 L55,37 L25,37 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M25,40 L55,40 L55,42 L25,42 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M25,45 L55,45 L55,47 L25,47 Z"/>
+    
+    <!-- Play Button -->
+    <path
+        android:fillColor="#CC0000"
+        android:pathData="M35,35 L45,40 L35,45 Z"/>
+</vector> 

@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="800dp"
+    android:viewportWidth="400"
+    android:viewportHeight="800">
+    
+    <!-- Dark overlay -->
+    <path
+        android:fillColor="#66000000"
+        android:pathData="M0,0 L400,0 L400,800 L0,800 Z"/>
+    
+    <!-- Blurred movie poster 1 (The Dark Knight) -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M50,100 L150,100 L150,300 L50,300 Z"/>
+    
+    <!-- Blurred movie poster 2 (Iron Man 3) -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M250,150 L350,150 L350,350 L250,350 Z"/>
+    
+    <!-- Blurred movie poster 3 (Avatar) -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M100,400 L200,400 L200,600 L100,600 Z"/>
+    
+    <!-- Blurred movie poster 4 (Plane) -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M300,450 L380,450 L380,650 L300,650 Z"/>
+    
+    <!-- Additional blur effects -->
+    <path
+        android:fillColor="#22000000"
+        android:pathData="M0,0 L400,0 L400,200 L0,200 Z"/>
+    <path
+        android:fillColor="#22000000"
+        android:pathData="M0,600 L400,600 L400,800 L0,800 Z"/>
+</vector> 
