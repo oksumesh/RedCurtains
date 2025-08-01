@@ -48,27 +48,25 @@ class CreatePasswordActivity : AppCompatActivity() {
         try {
             val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
             
-            // Hide both status bar and navigation bar
-            windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+            // Only hide navigation bar, keep status bar visible
+            windowInsetsController.hide(WindowInsetsCompat.Type.navigationBars())
             
             // Make the UI immersive
             windowInsetsController.systemBarsBehavior = 
                 WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         } catch (e: Exception) {
             // Fallback to legacy method if modern API fails
-            forceFullScreen()
+            forceSemiFullScreen()
         }
     }
     
-    private fun forceFullScreen() {
-        // Use legacy method as backup
+    private fun forceSemiFullScreen() {
+        // Use legacy method as backup - only hide navigation bar
         window.decorView.systemUiVisibility = (
-            android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
-            or android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
             or android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
             or android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
             or android.view.View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-            or android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         )
     }
     

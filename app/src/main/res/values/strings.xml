@@ -45,4 +45,81 @@
     <string name="password_rule_3">This is a success tooltip</string>
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm Password</string>
+    
+    <!-- Polls Screen -->
+    <string name="polls_title">Polls</string>
+    <string name="search_polls_hint">Search polls</string>
+    <string name="category_filter">Category</string>
+    <string name="popular_filter">Popular</string>
+    <string name="newest_filter">Newest</string>
+    <string name="community_polls">Community Polls</string>
+    <string name="trending_discussions">Trending Discussions</string>
+    <string name="create_poll">Create Poll</string>
+    <string name="action_movie_night">Action Movie Night?</string>
+    <string name="comedy_marathon">Comedy Marathon</string>
+    <string name="drama_film_discussion">Drama Film Discussion</string>
+    <string name="scifi_film_debate">Sci-Fi Film Debate</string>
+    <string name="thriller_movie_poll">Thriller Movie Poll</string>
+    <string name="animated_film_favorites">Animated Film Favorites</string>
+    
+    <!-- Create Poll Screen -->
+    <string name="create_new_poll">Create New Poll</string>
+    <string name="poll_title_question">Poll Title/Question</string>
+    <string name="poll_title_hint">Enter your poll question here...</string>
+    <string name="answer_choices">Answer Choices</string>
+    <string name="answer_choice_1">Answer Choice 1</string>
+    <string name="answer_choice_2">Answer Choice 2</string>
+    <string name="answer_choice_3">Answer Choice 3</string>
+    <string name="add_answer_choice">Add Answer Choice</string>
+    <string name="poll_settings">Poll Settings</string>
+    <string name="anonymous_voting">Anonymous Voting</string>
+    <string name="anonymous_voting_description">Allow users to vote anonymously</string>
+    <string name="poll_duration">Poll Duration</string>
+    <string name="poll_duration_description">Set a duration for the poll</string>
+    <string name="visibility">Visibility</string>
+    <string name="visibility_description">Set visibility for the poll</string>
+    <string name="public_visibility">Public</string>
+    <string name="publish_poll">Publish Poll</string>
+    <string name="save_draft">Save Draft</string>
+    
+    <!-- Poll Vote Screen -->
+    <string name="poll">Poll</string>
+    <string name="sample_poll_question">Which movie are you most excited to see this week?</string>
+    <string name="movie_option_1">The Last Frontier</string>
+    <string name="movie_option_2">Echoes of the Past</string>
+    <string name="movie_option_3">Starlight Symphony</string>
+    <string name="movie_option_4">Crimson Tide</string>
+    <string name="submit_vote">Submit Vote</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile">Profile</string>
+    <string name="sample_user_name">John Doe</string>
+    <string name="sample_user_email">john.doe@example.com</string>
+    <string name="loyalty_rewards">Loyalty Rewards</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Loyalty Rewards Screen -->
+    <string name="loyalty_rewards_content">Loyalty Rewards</string>
+    <string name="loyalty_rewards_description">Earn points and unlock exclusive benefits</string>
+    <string name="points_balance">Points Balance</string>
+    <string name="gold_tier">Gold Tier</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="earn_points">Earn Points</string>
+    <string name="redeem_rewards">Redeem Rewards</string>
+    <string name="available_rewards">Available Rewards</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="movie_ticket_purchase">Movie Ticket Purchase</string>
+    <string name="free_popcorn_redeemed">Free Popcorn Redeemed</string>
+    <string name="free_popcorn">Free Popcorn</string>
+    <string name="free_popcorn_description">Enjoy a free medium popcorn with any movie ticket purchase</string>
+    <string name="available">Available</string>
+    <string name="free_soda">Free Soda</string>
+    <string name="free_soda_description">Get a free medium soda with any movie ticket</string>
+    <string name="discount_ticket">Discount Ticket</string>
+    <string name="discount_ticket_description">Get 20% off on your next movie ticket</string>
+    <string name="vip_seating">VIP Seating</string>
+    <string name="vip_seating_description">Upgrade to premium seating for your next movie</string>
 </resources>

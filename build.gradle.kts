@@ -6,6 +6,9 @@ plugins {
     // Add the dependency for the Google services Gradle plugin
     id("com.google.gms.google-services") version "4.4.3" apply false
     
+    // Add Firebase Crashlytics plugin
+    id("com.google.firebase.crashlytics") version "2.9.9" apply false
+    
     // Add Firebase App Distribution plugin
     id("com.google.firebase.appdistribution") version "4.2.0" apply false
 }

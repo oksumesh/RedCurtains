@@ -5,6 +5,9 @@ plugins {
     // Add the Google services Gradle plugin
     id("com.google.gms.google-services")
     
+    // Add Firebase Crashlytics plugin
+    id("com.google.firebase.crashlytics")
+    
     // Add Firebase App Distribution plugin
     id("com.google.firebase.appdistribution")
 }
@@ -13,18 +16,28 @@ android {
     namespace = "com.example.redcurtains"
     compileSdk = 36
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("../redcurtains-keystore.jks")
+            storePassword = "redcurtains123"
+            keyAlias = "redcurtains_key"
+            keyPassword = "redcurtains123"
+        }
+    }
+
     defaultConfig {
         applicationId = "com.example.redcurtains"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.2"
+        versionCode = 3
+        versionName = "1.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

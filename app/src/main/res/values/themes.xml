@@ -17,7 +17,7 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowTranslucentNavigation">false</item>
-        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFullscreen">false</item>
     </style>
 
     <style name="Theme.RedCurtains" parent="Base.Theme.RedCurtains" />
@@ -48,5 +48,61 @@
         <item name="hintTextColor">@color/text_secondary</item>
         <item name="android:textColorHint">@color/text_secondary</item>
         <item name="cornerRadius">24dp</item>
+    </style>
+    
+    <style name="SearchInputStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/input_background</item>
+        <item name="boxStrokeColor">@color/input_border</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+    
+    <style name="FilterButtonStyle" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@color/input_background</item>
+        <item name="strokeColor">@color/input_border</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="iconTint">@color/text_secondary</item>
+    </style>
+    
+    <style name="CreatePollInputStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/input_background</item>
+        <item name="boxStrokeColor">@color/input_border</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+    
+    <style name="AddAnswerChoiceButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/accent_orange</item>
+        <item name="iconTint">@color/accent_orange</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="PublishPollButtonStyle" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/accent_orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+    
+    <style name="SaveDraftButtonStyle" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@color/surface_dark</item>
+        <item name="strokeColor">@color/input_border</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+    
+    <style name="SubmitVoteButtonStyle" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/accent_orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

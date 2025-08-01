@@ -14,14 +14,9 @@
         
         <activity
             android:name=".SignInActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.RedCurtains">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.RedCurtains" />
         
         <activity
             android:name=".SignUpActivity"
@@ -31,7 +26,14 @@
         
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         
         <activity
             android:name=".ForgotPasswordActivity"
@@ -47,6 +49,60 @@
         
         <activity
             android:name=".CreatePasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".PollsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".TicketsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".FavoritesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".CreatePollActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".PollVoteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RedCurtains" />
+        
+        <activity
+            android:name=".LoyaltyRewardsActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.RedCurtains" />

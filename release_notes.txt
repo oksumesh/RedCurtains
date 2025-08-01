@@ -1,1 +1,18 @@
 Logo Updated
+
+Version 1.3 - Enhanced Loyalty Rewards Screen
+• Completely redesigned loyalty rewards interface
+• Added points balance display with progress tracking
+• Implemented interactive reward cards with redemption functionality
+• Added transaction history section
+• Quick action buttons for earning points and redeeming rewards
+• Improved user experience with toast notifications and help system
+• Added gift icon for reward items
+• Enhanced visual design matching app's dark theme
+
+Version 1.4 - App Signing & Distribution
+• Implemented automatic app signing with keystore
+• Enhanced security with digital certificate
+• Improved app distribution process
+• Ready for production deployment
+• Optimized build configuration
