@@ -125,14 +125,27 @@ class ProfileActivity : AppCompatActivity() {
         }
         
         logoutOption.setOnClickListener {
-            // TODO: Implement logout functionality
+            handleLogout()
         }
     }
     
     private fun loadUserData() {
-        // TODO: Load actual user data from database or preferences
-        // For now, using sample data
+        // Load user data from AuthManager
+        val userEmail = AuthManager.getUserEmail(this)
+        
+        // For now, using sample name and actual email
         userName.text = getString(R.string.sample_user_name)
-        userEmail.text = getString(R.string.sample_user_email)
+        this.userEmail.text = userEmail ?: getString(R.string.sample_user_email)
+    }
+    
+    private fun handleLogout() {
+        // Clear login state
+        AuthManager.clearLoginState(this)
+        
+        // Navigate back to SignInActivity
+        val intent = Intent(this, SignInActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 } 

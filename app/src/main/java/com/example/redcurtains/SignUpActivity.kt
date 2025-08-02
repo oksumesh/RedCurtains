@@ -11,12 +11,17 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.ProgressBar
+import android.view.View
 
 class SignUpActivity : AppCompatActivity() {
     
     private lateinit var backButton: androidx.appcompat.widget.AppCompatImageView
-    private lateinit var phoneNumberText: EditText
+    private lateinit var emailText: EditText
+    private lateinit var emailErrorText: TextView
     private lateinit var continueButton: MaterialButton
+    private lateinit var loadingProgressBar: ProgressBar
     private lateinit var googleSignInButton: MaterialButton
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +46,7 @@ class SignUpActivity : AppCompatActivity() {
         
         initializeViews()
         setupClickListeners()
+        setupEmailValidation()
     }
     
     private fun hideSystemUI() {
@@ -85,8 +91,10 @@ class SignUpActivity : AppCompatActivity() {
     
     private fun initializeViews() {
         backButton = findViewById(R.id.backButton)
-        phoneNumberText = findViewById(R.id.phoneNumberText)
+        emailText = findViewById(R.id.emailText)
+        emailErrorText = findViewById(R.id.emailErrorText)
         continueButton = findViewById(R.id.continueButton)
+        loadingProgressBar = findViewById(R.id.loadingProgressBar)
         googleSignInButton = findViewById(R.id.googleSignInButton)
     }
     
@@ -110,15 +118,71 @@ class SignUpActivity : AppCompatActivity() {
     }
     
     private fun handleContinueButton() {
-        val phoneNumber = phoneNumberText.text.toString()
+        val email = emailText.text.toString().trim()
         
-        if (phoneNumber.isEmpty()) {
-            Toast.makeText(this, "Please enter a phone number", Toast.LENGTH_SHORT).show()
+        if (!isEmailValid(email)) {
             return
         }
         
-        // TODO: Implement phone number validation and verification
-        Toast.makeText(this, "Phone verification coming soon!", Toast.LENGTH_SHORT).show()
+        // Show loading state
+        showLoadingState(true)
+        
+        // Simulate API call
+        emailText.postDelayed({
+            // TODO: Implement actual email verification with backend
+            showLoadingState(false)
+            Toast.makeText(this, "Email verification coming soon!", Toast.LENGTH_SHORT).show()
+        }, 2000) // 2 second delay to simulate network call
+    }
+    
+    private fun isEmailValid(email: String): Boolean {
+        if (email.isEmpty()) {
+            showEmailError("Please enter an email address")
+            return false
+        }
+        
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            showEmailError("Please enter a valid email address")
+            return false
+        }
+        
+        clearEmailError()
+        return true
+    }
+    
+    private fun showEmailError(message: String) {
+        emailErrorText.text = message
+        emailErrorText.visibility = View.VISIBLE
+    }
+    
+    private fun clearEmailError() {
+        emailErrorText.visibility = View.GONE
+        emailErrorText.text = ""
+    }
+    
+    private fun showLoadingState(show: Boolean) {
+        if (show) {
+            continueButton.isEnabled = false
+            continueButton.text = "Verifying..."
+            loadingProgressBar.visibility = View.VISIBLE
+        } else {
+            continueButton.isEnabled = true
+            continueButton.text = getString(R.string.continue_text)
+            loadingProgressBar.visibility = View.GONE
+        }
+    }
+    
+    private fun setupEmailValidation() {
+        emailText.addTextChangedListener(object : android.text.TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: android.text.Editable?) {
+                val email = s.toString().trim()
+                if (email.isNotEmpty() && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    clearEmailError()
+                }
+            }
+        })
     }
     
     private fun handleGoogleSignIn() {

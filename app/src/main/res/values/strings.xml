@@ -18,7 +18,10 @@
     <string name="sign_up">Sign up</string>
     <string name="back">Back</string>
     <string name="phone">Phone</string>
+    <string name="email_hint_signup">Enter your email address</string>
     <string name="continue_text">Continue</string>
+    <string name="welcome_to_red_curtain">Welcome to Red Curtain</string>
+    <string name="create_account_subtitle">Create your account to get started</string>
     <string name="google_sign_in">Google</string>
     <string name="terms_of_service_agreement">By sign in or sign up, you agree to our Terms of Service</string>
     <string name="privacy_policy">and Privacy Policy</string>

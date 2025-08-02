@@ -1,6 +1,7 @@
 package com.example.redcurtains
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -26,8 +27,16 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var googleButton: MaterialButton
     private lateinit var appleButton: MaterialButton
     
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Check if user is already logged in
+        if (isUserLoggedIn()) {
+            // User is already logged in, navigate to MainActivity
+            navigateToMainActivity()
+            return
+        }
         
         // Enable edge-to-edge display
         enableEdgeToEdge()
@@ -48,6 +57,16 @@ class SignInActivity : AppCompatActivity() {
         
         initializeViews()
         setupClickListeners()
+    }
+    
+    private fun isUserLoggedIn(): Boolean {
+        return AuthManager.isLoggedIn(this)
+    }
+    
+    private fun navigateToMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish() // Close the SignInActivity
     }
     
     private fun hideSystemUI() {
@@ -154,14 +173,19 @@ class SignInActivity : AppCompatActivity() {
             return
         }
         
-        // TODO: Implement actual authentication logic
+        // TODO: Implement actual authentication logic with backend
+        // For now, simulate successful authentication
+        
+        // Save login state
+        AuthManager.saveLoginState(this, email, rememberMe)
+        
         Toast.makeText(this, "Sign in successful!", Toast.LENGTH_SHORT).show()
         
         // Navigate to Main screen after successful login
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish() // Close the login screen
+        navigateToMainActivity()
     }
+    
+
     
     private fun handleForgotPassword() {
         // Navigate to ForgotPasswordActivity
